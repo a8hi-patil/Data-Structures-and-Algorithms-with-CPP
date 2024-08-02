@@ -123,7 +123,7 @@
   7. q.swap(q2)
 
 4. Stack
-   - Provides last in - first out (FIFO) data structure.
+   - Provides last in - first out (LIFO) data structure.
    - Declaration
      stack < int > st;
 
