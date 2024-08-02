@@ -8,7 +8,7 @@ void solve(vector<int> v, vector<int> &ans)
 {
     stack<int> s;
     s.push(-1);
-    for (int i = v.size() - 1; i >= 0; i--)
+    for (int i = 0; i < v.size(); i++)
     {
         if (!s.empty() && s.top() < v[i])
         {
@@ -26,7 +26,7 @@ void solve(vector<int> v, vector<int> &ans)
 int main()
 {
     system("cls");
-    vector<int> v = {8, 4, 6, 2, 3};
+    vector<int> v = {8, 4, 2, 6, 3};
     vector<int> ans;
     solve(v, ans);
     reverse(ans.begin(), ans.end());
