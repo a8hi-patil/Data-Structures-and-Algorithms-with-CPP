@@ -10,23 +10,22 @@ void solve(vector<int> v, vector<int> &ans)
     s.push(-1);
     for (int i = v.size() - 1; i >= 0; i--)
     {
-        if (!s.empty() && s.top() < v[i])
-        {
-            ans.push_back(s.top());
-            s.push(v[i]);
-        }
-        else
-        {
-            s.pop();
-            ans.push_back(s.top());
-            s.push(v[i]);
-        }
+      int element = v[i];
+        while(s.top() >= element) {
+      s.pop();
+    }
+    
+    ans.push_back(s.top());
+    
+    s.push(element);
+  
     }
 }
 int main()
 {
     system("cls");
-    vector<int> v = {8, 4, 6, 2, 3};
+    vector<int> v = {8, 4, 0, 2, 3};
+    // vector<int> v = {4, 2, 0, 3, 2, 4, 3, 4};
     vector<int> ans;
     solve(v, ans);
     reverse(ans.begin(), ans.end());
