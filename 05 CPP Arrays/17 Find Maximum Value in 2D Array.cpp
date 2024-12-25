@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <limits>
+
+using namespace std;
+
+int minimumValueIn2DArray(vector<vector<int>> arr)
+{
+    int row = arr.size();
+    int col = arr[0].size();
+    int minVal = INT_MIN;
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            if (arr[i][j] > minVal)
+            {
+                minVal = arr[i][j];
+            }
+        }
+    }
+    return minVal;
+}
+int main()
+{
+    system("cls");
+    vector<vector<int>> arr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+    int minVal = minimumValueIn2DArray(arr);
+    cout << "Minimum value in 2D array is " << minVal << endl;
+    return 0;
+}
