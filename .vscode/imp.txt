@@ -1,0 +1,3 @@
+function prompt {
+    "$PWD" -replace "C:\\.*\\", ">" # Show only the current folder name
+}
