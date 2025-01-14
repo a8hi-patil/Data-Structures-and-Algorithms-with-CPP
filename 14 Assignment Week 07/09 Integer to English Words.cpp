@@ -49,7 +49,7 @@ string numsToWords(int num)
             string a = "";
             if (num >= 100)
             {
-                a = numsToWords(num / 100) + " ";
+                a = numsToWords(num / el.first) + " ";
             }
 
             string b = el.second;
